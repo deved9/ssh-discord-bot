@@ -1,5 +1,11 @@
 # ssh_discord_bot
-when started, launches a discord bot on local machine with ngrok tunnel to port 22 for ssh connection
+When started, launches a discord bot on local machine with ngrok tunnel on port 22 for ssh connection
 
-adding your server token is required,
-paste your token on the last line in main.py file into the "client.run("(token here)")"
+You need to create your own discord bot on this link https://discord.com/developers/applications and invite him to your server
+
+Adding your bot token and ngrok authtoken is required
+
+Paste your discord bot token on the last line in main.py file into the "client.run("")" and your ngrok authtoken to 
+ngrok.set_auth_token("").
+
+To run the bot just start the main.py file.
