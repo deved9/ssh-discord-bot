@@ -8,4 +8,4 @@ Adding your bot token and ngrok authtoken is required
 Paste your discord bot token on the last line in main.py file into the "client.run("")" and your ngrok authtoken to 
 ngrok.set_auth_token("").
 
-To run the bot just start the main.py file.
+To run the bot just start the main.py file with the bot_env virtual environment activated.
