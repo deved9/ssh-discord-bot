@@ -1,0 +1,14 @@
+[Unit]
+Description=Discord SSH Bot
+
+Wants=network-online.target
+After=sshd.service
+
+[Service]
+Type=simple
+Restart=on-failure
+RestartSec=5s
+ExecStart=/etc/systemd/system/ssh-discord-bot/venv/bin/python /etc/systemd/system/ssh-discord-bot/main.py
+
+[Install]
+WantedBy=graphical.target
