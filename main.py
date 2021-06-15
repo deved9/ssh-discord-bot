@@ -10,7 +10,7 @@ ngrok.set_auth_token("")
 prefix = "--"
 
 #list of available commands to print when asked for help
-commands = ["help" , "ngrok"]
+commands = ["help" , "ngrok","reboot","shutdown"]
 
 client = discord.Client()
 
@@ -42,6 +42,12 @@ async def on_message(message):
             for tunel in tunels:
                 string += f"  {tunel}\n"
             await channel.send(string)
+        elif message.content == f"{prefix}{commands[2]}":           # --reboot
+            await channel.send("Rebooting...")
+            os.system("reboot")
+        elif message.content == f"{prefix}{commands[3]}":           # --shutdown
+            await chenel.send("Shutting Down...")
+            os.system("sudo shutdown now")
 
 #paste discord bot token here
 client.run("")
